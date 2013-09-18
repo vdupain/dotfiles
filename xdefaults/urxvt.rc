@@ -1,0 +1,14 @@
+URxvt.font: xft:Ubuntu Mono:size=9
+URxvt*foreground: #f2f2f2
+URxvt*background: #101010
+
+URxvt.inheritPixmap: true
+URxvt.tintColor: #FF0000
+URxvt.shading:110
+
+URxvt.perl-ext-common: default,clipboard
+
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
+
+
