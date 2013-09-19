@@ -28,7 +28,7 @@ URxvt.font: xft:Ubuntu Mono:size=9
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-URxvt.perl-lib: /home/vince/.urxvt/perl
+URxvt.perl-lib: $HOME/.urxvt/perl
 URxvt.perl-ext-common: ...,clipboard
 ! URxvt.keysym.Mod4-c:   perl:clipboard:copy
 ! URxvt.keysym.Mod4-v:   perl:clipboard:paste

@@ -81,7 +81,7 @@ bindsym $mod+q focus parent
 bindsym $mod+ampersand workspace 1:shell
 bindsym $mod+eacute workspace 2:web
 bindsym $mod+quotedbl workspace 3:fm
-bindsym $mod+apostrophe workspace 4
+bindsym $mod+apostrophe workspace 4:dev
 bindsym $mod+parenleft workspace 5
 bindsym $mod+section workspace 6
 bindsym $mod+egrave workspace 7
@@ -93,7 +93,7 @@ bindsym $mod+agrave workspace 10
 bindsym $mod+Shift+1 move container to workspace 1:shell
 bindsym $mod+Shift+2 move container to workspace 2:web
 bindsym $mod+Shift+3 move container to workspace 3:fm
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+4 move container to workspace 4:dev
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
@@ -177,6 +177,9 @@ assign [class="URxvt"] 1:shell
 assign [class="^Gnome-terminal$"] 1:shell
 assign [class="^Google-chrome$"] 2:web
 assign [class="^Nautilus$"] 3:fm
+assign [class="^jetbrains-idea$"] 4:dev
+
+
 
 # enable floating mode for all XTerm windows
 #for_window [class="^Nautilus$"] floating enable
