@@ -1,14 +1,39 @@
+URxvt.background: black
+URxvt.foreground: white
+URxvt.jumpScroll: True
+URxvt.skipScroll: True
+#URxvt.transparent: True
+URxvt.shading: 25
+URxvt.blurRadius: 8x1
+URxvt.scrollBar: False
+URxvt.scrollTtyOutput: False
+URxvt.scrollWithBuffer: True
+URxvt.scrollTtyKeypress: True
+URxvt.saveLines: 2048
+URxvt.pastableTabs: True
+URxvt.cursorBlink: True
+URxvt.pointerBlank: True
+URxvt.pointerBlankDelay: 60
+URxvt.color4: dodgerblue
+URxvt.color12: dodgerblue
+URxvt.urgentOnBell: true
+
 URxvt.font: xft:Ubuntu Mono:size=9
-URxvt*foreground: #f2f2f2
-URxvt*background: #101010
+#URxvt*foreground: #f2f2f2
+#URxvt*background: #101010
+#URxvt.inheritPixmap: true
+#URxvt.tintColor: #110000
+#URxvt.shading:110
 
-URxvt.inheritPixmap: true
-URxvt.tintColor: #FF0000
-URxvt.shading:110
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 
-URxvt.perl-ext-common: default,clipboard
-
-URxvt.clipboard.copycmd:  xsel -ib
-URxvt.clipboard.pastecmd: xsel -ob
-
+URxvt.perl-lib: /home/vince/.urxvt/perl
+URxvt.perl-ext-common: ...,clipboard
+#URxvt.keysym.Mod4-c:   perl:clipboard:copy
+#URxvt.keysym.Mod4-v:   perl:clipboard:paste
+#URxvt.keysym.Mod4-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 

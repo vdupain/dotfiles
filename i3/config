@@ -18,7 +18,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec rxvt
 
 # kill focused window
 bindsym $mod+Shift+A kill
@@ -77,9 +78,9 @@ bindsym $mod+q focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+ampersand workspace 1
-bindsym $mod+eacute workspace 2
-bindsym $mod+quotedbl workspace 3
+bindsym $mod+ampersand workspace 1:shell
+bindsym $mod+eacute workspace 2:web
+bindsym $mod+quotedbl workspace 3:fm
 bindsym $mod+apostrophe workspace 4
 bindsym $mod+parenleft workspace 5
 bindsym $mod+section workspace 6
@@ -89,9 +90,9 @@ bindsym $mod+ccedilla workspace 9
 bindsym $mod+agrave workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+1 move container to workspace 1:shell
+bindsym $mod+Shift+2 move container to workspace 2:web
+bindsym $mod+Shift+3 move container to workspace 3:fm
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
@@ -148,23 +149,23 @@ default_orientation vertical
 bindcode 232 exec xbacklight -dec 10
 bindcode 233 exec xbacklight -inc 10
 
+
 # Sound
-bindcode 121 exec amixer -q set Master toggle
-bindcode 122 exec amixer -q set Master 1%- unmute
-bindcode 123 exec amixer -q set Master 1%+ unmute
+bindcode 121 exec amixer set Master toggle
+bindcode 122 exec amixer set Master -5 unmute
+bindcode 123 exec amixer set Master +5 unmute
+#bindcode 122 exec pactl set-sink-volume 0 -- -5%
+#bindcode 123 exec pactl set-sink-volume 0 +5%
 
 # Lock and suspend
-bindsym $mod+o exec i3lock -c 000000 -d & sudo pm-suspend
-
-# Lock Computer
-#bindsym $mod+l exec i3lock -c 000000 -d
-#bindsym Control+Mod1+L exec i3lock -c 000000 -d
+#bindsym $mod+Mod1+l exec i3lock -c 111111 -d
+#bindsym $mod+Control+Mod1+l exec i3lock -c 111111 -d && sudo pm-suspend-hybrid 
 
 # AUTOSTART
 # automatically starting applications on i3 startup
-exec killall urxvtd & /usr/bin/urxvtd 
-
 #exec /usr/bin/gnome-settings-daemon
+exec --no-startup-id sh ~/.fehbg
+
 # Sound Tray Applet
 #exec gnome-sound-applet
 # Network Tray Applet
@@ -172,6 +173,25 @@ exec nm-applet
 #exec nm-applet -sm-disable     # Network Manager
 
 # Automatically putting clients on specific workspaces
-assign [class="URxvt"] 1
-assign [class="^Gnome-terminal$"] 1
-assign [class="^Google-chrome$"] 2
+assign [class="URxvt"] 1:shell
+assign [class="^Gnome-terminal$"] 1:shell
+assign [class="^Google-chrome$"] 2:web
+assign [class="^Nautilus$"] 3:fm
+
+# enable floating mode for all XTerm windows
+#for_window [class="^Nautilus$"] floating enable
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+x mode "$mode_system"
