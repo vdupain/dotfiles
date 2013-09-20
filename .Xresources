@@ -1,3 +1,4 @@
+URxvt.font: xft:Ubuntu Mono:size=9
 URxvt.background: black
 URxvt.foreground: white
 URxvt.jumpScroll: True
@@ -17,14 +18,11 @@ URxvt.pointerBlankDelay: 60
 URxvt.color4: dodgerblue
 URxvt.color12: dodgerblue
 URxvt.urgentOnBell: true
+! resolving ‘rxvt-unicode’: unknown terminal type
+URxvt.termName: rxvt 
 
-URxvt.font: xft:Ubuntu Mono:size=9
-! URxvt*foreground: #f2f2f2
-! URxvt*background: #101010
-! URxvt.inheritPixmap: true
-! URxvt.tintColor: #110000
-! URxvt.shading:110
-
+! le Control-Shift est déjà pris par urxvt pour gérer l'encodage "manuel" des caractères unicode (standard ISO 14755)
+! la solution consiste à désactiver cette fonctionnalité
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
