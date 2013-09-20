@@ -21,8 +21,7 @@ URxvt.urgentOnBell: true
 ! resolving ‘rxvt-unicode’: unknown terminal type
 URxvt.termName: rxvt 
 
-! le Control-Shift est déjà pris par urxvt pour gérer l'encodage "manuel" des caractères unicode (standard ISO 14755)
-! la solution consiste à désactiver cette fonctionnalité
+! disable for copy-paste with Control-Shift
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
