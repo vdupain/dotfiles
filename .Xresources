@@ -18,7 +18,7 @@ URxvt.pointerBlankDelay: 60
 URxvt.color4: dodgerblue
 URxvt.color12: dodgerblue
 URxvt.urgentOnBell: true
-! resolving ‘rxvt-unicode’: unknown terminal type
+! resolving rxvt-unicode: unknown terminal type
 URxvt.termName: rxvt 
 
 ! disable for copy-paste with Control-Shift
