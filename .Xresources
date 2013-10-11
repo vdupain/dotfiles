@@ -1,11 +1,42 @@
-URxvt.font: xft:Ubuntu Mono:size=9
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintlight
+Xft.rgba: rgb
+
+!black
+*color0:  #222827
+*color8:  #5D6F74
+!red
+*color1:  #D5A8E3
+*color9:  #CD749C
+!green
+*color2:  #9C75DD
+*color10: #63B0B0
+!yellow
+*color3:  #9898AE
+*color11: #C0C0DD
+!blue
+*color4:  #654A96
+*color12: #5786BC
+!magenta
+*color5:  #625566
+*color13: #3F3442
+!cyan
+*color6:  #A9D1DF
+*color14: #849DA2
+!white
+*color7:  #E6EBE5
+*color15: #D9D6CF
+
+URxvt.font: xft:DejaVu Sans Mono-8
+URxvt.letterSpace: -1
+!URxvt.font: xft:Ubuntu Mono:size=9
 URxvt.background: black
 URxvt.foreground: white
-URxvt.jumpScroll: True
-URxvt.skipScroll: True
-! URxvt.transparent: True
-URxvt.shading: 25
-URxvt.blurRadius: 8x1
+!URxvt.jumpScroll: True
+!URxvt.skipScroll: True
+!URxvt.shading: 25
+!URxvt.blurRadius: 8x1
 URxvt.scrollBar: False
 URxvt.scrollTtyOutput: False
 URxvt.scrollWithBuffer: True
@@ -15,11 +46,12 @@ URxvt.pastableTabs: True
 URxvt.cursorBlink: True
 URxvt.pointerBlank: True
 URxvt.pointerBlankDelay: 60
-URxvt.color4: dodgerblue
-URxvt.color12: dodgerblue
+!URxvt.color4: dodgerblue
+!URxvt.color12: dodgerblue
 URxvt.urgentOnBell: true
 ! resolving rxvt-unicode: unknown terminal type
-URxvt.termName: rxvt 
+! URxvt.termName: rxvt-unicode 
+URxvt.termName: rxvt
 
 ! disable for copy-paste with Control-Shift
 URxvt.iso14755: false
