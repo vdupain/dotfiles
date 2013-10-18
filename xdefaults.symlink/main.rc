@@ -1,0 +1,9 @@
+#include "color.rc"
+#include "urxvt.rc"
+
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintlight
+Xft.rgba: rgb
+
+

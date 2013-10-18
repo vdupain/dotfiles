@@ -1,0 +1,31 @@
+URxvt.font: xft:DejaVu Sans Mono-9
+URxvt.letterSpace: -1
+
+URxvt.depth: 32
+URxvt.background: rgba:0000/0000/0000/dddd
+!URxvt.background: black
+URxvt.foreground: white
+
+URxvt.scrollBar: False
+URxvt.scrollTtyOutput: False
+URxvt.scrollWithBuffer: True
+URxvt.scrollTtyKeypress: True
+URxvt.saveLines: 2048
+URxvt.pastableTabs: True
+URxvt.cursorBlink: True
+URxvt.pointerBlank: True
+URxvt.pointerBlankDelay: 60
+URxvt.urgentOnBell: true
+! resolving rxvt-unicode: unknown terminal type
+! URxvt.termName: rxvt-unicode 
+URxvt.termName: rxvt
+
+! désactivation de l encodage "manuel" des caractères unicode (standard ISO 14755)
+! pour pouvoir récupérer le "Control-Shift" pour le copy-paste
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.perl-lib: .urxvt/perl
+URxvt.perl-ext-common: ...,clipboard,default,matcher
+URxvt.keysym.Control-Shift-C:   perl:clipboard:copy
+URxvt.keysym.Control-Shift-V:   perl:clipboard:paste
