@@ -3,7 +3,6 @@ URxvt.letterSpace: -1
 
 URxvt.depth: 32
 URxvt.background: rgba:0000/0000/0000/dddd
-!URxvt.background: black
 URxvt.foreground: white
 
 URxvt.scrollBar: False
