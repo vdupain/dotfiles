@@ -24,7 +24,17 @@ URxvt.termName: rxvt
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-URxvt.perl-lib: .urxvt/perl
-URxvt.perl-ext-common: ...,clipboard,default,matcher
-URxvt.keysym.Control-Shift-C:   perl:clipboard:copy
-URxvt.keysym.Control-Shift-V:   perl:clipboard:paste
+! onglets
+URxvt.perl-ext:              tabbed
+URxvt.perl-lib: /home/vince/.urxvt/perl
+! URxvt.perl-ext-common: ...,clipboard,default,matcher
+! URxvt.keysym.Control-Shift-C:   perl:clipboard:copy
+! URxvt.keysym.Control-Shift-V:   perl:clipboard:paste
+!URxvt.perl-ext-common: ...,clipboard
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+URxvt.urlLauncher:           google-chrome
+! couleur des urls
+URxvt.colorBD:               3
