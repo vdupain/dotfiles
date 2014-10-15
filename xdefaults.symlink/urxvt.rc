@@ -1,15 +1,16 @@
+! Police
 URxvt.font: xft:DejaVu Sans Mono-9
 URxvt.letterSpace: -1
 
-URxvt.depth: 32
-URxvt.background: rgba:0000/0000/0000/dddd
-URxvt.foreground: white
+URxvt.foreground: #f2f2f2
+URxvt.background: #101010
 
+! Scrollbar
+URxvt.saveLines: 10000
 URxvt.scrollBar: False
 URxvt.scrollTtyOutput: False
 URxvt.scrollWithBuffer: True
 URxvt.scrollTtyKeypress: True
-URxvt.saveLines: 2048
 URxvt.pastableTabs: True
 URxvt.cursorBlink: True
 URxvt.pointerBlank: True
@@ -17,24 +18,14 @@ URxvt.pointerBlankDelay: 60
 URxvt.urgentOnBell: true
 ! resolving rxvt-unicode: unknown terminal type
 ! URxvt.termName: rxvt-unicode 
-URxvt.termName: rxvt
+! URxvt.termName: rxvt
 
 ! désactivation de l encodage "manuel" des caractères unicode (standard ISO 14755)
 ! pour pouvoir récupérer le "Control-Shift" pour le copy-paste
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-! onglets
-URxvt.perl-ext:              tabbed
-URxvt.perl-lib: /home/vince/.urxvt/perl
-! URxvt.perl-ext-common: ...,clipboard,default,matcher
-! URxvt.keysym.Control-Shift-C:   perl:clipboard:copy
-! URxvt.keysym.Control-Shift-V:   perl:clipboard:paste
-!URxvt.perl-ext-common: ...,clipboard
-URxvt.keysym.M-c:   perl:clipboard:copy
-URxvt.keysym.M-v:   perl:clipboard:paste
-URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-
-URxvt.urlLauncher:           google-chrome
-! couleur des urls
-URxvt.colorBD:               3
+URxvt.perl-ext: tabbed
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
