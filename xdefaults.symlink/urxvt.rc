@@ -25,7 +25,7 @@ URxvt.urgentOnBell: true
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-URxvt.perl-ext: tabbed
-URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.perl-ext: tabbed,default,matcher,clipboard
 URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
 URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+
